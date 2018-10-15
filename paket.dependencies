@@ -37,3 +37,6 @@ nuget Microsoft.Net.Http
 nuget SlickProxy
 nuget JsGridLibNetJS
 nuget PecanDB
+nuget Microsoft.Owin.Security.Cookies
+nuget Microsoft.Owin.Security.Google
+nuget Microsoft.AspNet.Identity.Owin

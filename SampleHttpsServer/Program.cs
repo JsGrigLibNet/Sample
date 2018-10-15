@@ -8,8 +8,9 @@
     {
         private static void Main(string[] args)
         {
-            string httpLocalhost = "https://localhost:44305";
-            string query = "https://localhost:44305/api/values/getall";
+            string httpLocalhost = "https://localhost:44302";
+            string loginCheck = "https://localhost:44302/api/values/getall";
+            string logout = "https://localhost:44302/account/logoff";
             using (WebApp.Start<StartUp>(httpLocalhost))
             {
                 Console.WriteLine("Press [enter] to quit...");

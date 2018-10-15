@@ -1,10 +1,12 @@
 ﻿namespace SampleHttpsServer
 {
     using System.Linq;
+    using System.Web.Http;
 
-    public class ValuesController : GenericJsGridController<Employee,ViewableEmployee>
+    [Authorize]
+    public class GridController : GenericJsGridController<Employee,ViewableEmployee>
     {
-        public ValuesController()
+        public GridController()
             : base((db, filter) =>
                 {
                     return db.Where(c => c != null);

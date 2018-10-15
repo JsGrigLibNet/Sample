@@ -26,3 +26,6 @@ Microsoft.Owin.Cors
 SlickProxy
 JsGridLibNetJS
 PecanDB
+Microsoft.Owin.Security.Cookies
+Microsoft.Owin.Security.Google
+Microsoft.AspNet.Identity.Owin

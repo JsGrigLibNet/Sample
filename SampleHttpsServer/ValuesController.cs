@@ -2,7 +2,7 @@
 {
     using System.Linq;
 
-    public class ValuesController : GenericJsGridController<ViewableEmployee, Employee>
+    public class ValuesController : GenericJsGridController<Employee,ViewableEmployee>
     {
         public ValuesController()
             : base((db, filter) =>
@@ -10,26 +10,20 @@
                     return db.Where(c => c != null);
                 }, 
                 ValidationObj.Validation, 
-                new InMemoryJsGridDataStorage<ViewableEmployee>(),  
-                (s)=>
+                new PecanDbService(), 
+                (s) => new Employee()
                 {
-                    return new ViewableEmployee()
-                    {
-                        Position = s.EmployeePosition,
-                        Name = s.EmployeeName,
-                        Id = s.Id,
-                        Contact = s.EmployeeContect
-                    };
-                }, 
-                (s) =>
+                    EmployeePosition = s.Position,
+                    EmployeeName = s.Name,
+                    Id = s.Id,
+                    EmployeeContect = s.Contact
+                },
+                (s)=> new ViewableEmployee()
                 {
-                    return new Employee()
-                    {
-                        EmployeePosition = s.Position,
-                        EmployeeName = s.Name,
-                        Id = s.Id,
-                        EmployeeContect = s.Contact
-                    };
+                    Position = s.EmployeePosition,
+                    Name = s.EmployeeName,
+                    Id = s.Id,
+                    Contact = s.EmployeeContect
                 })
         {
         }

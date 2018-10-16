@@ -32,6 +32,48 @@
         gridApp.Post = "/api/Grid/post";
         gridApp.Delete = "/api/Grid/delete";
         gridApp.GetValidation = "/api/Grid/GetValidation";
+        gridApp.UniqueId = '1';
+        gridApp.CreateDialogTitle = "";
+        gridApp.UpdateDialogTitle = "";
+        gridApp.SaveButtonName = "Save Changes";
+        gridApp.SaveButtonAttribute = "class='btn btn-primary'";
+       
+        gridApp.RowOperationsName = "";
+        gridApp.alert = function(o) { alert(o); };
+        gridApp.RowOperations = [
+            {
+                id: "Edit",
+                display:"Edit",
+                handler: function (item, e) {
+                    gridApp.showDetailsDialog("Edit", item, gridApp.UpdateDialogTitle || "Edit");
+                }
+            },
+            {
+                id: "DeleteItem",
+                display: "Delete Item",
+                handler: function (item, e) {
+                    if (window.confirm(
+                        "Data will be deleted and may be IRREVERSIBLE!. Are you sure you want to do this ?")) {
+                        gridApp.deleteItem(item);
+                    } else {
+                        $("#jsGrid").jsGrid("cancelEdit");
+                    }
+                }
+            },
+            {
+                display: "Open google",
+                id: "OpenGoogle",
+                handler: function (item, e) {
+                    window.location.href = "http://www.google.com";
+                }
+            }
+        ];
+        gridApp.GetValidationError = function(item) {
+            if (!item.position) {
+                return "Unable to perform update. Please supply a position";
+            }
+        };
+        
         gridAppBuilder("#jsGrid", gridApp);
     </script>
 </body>

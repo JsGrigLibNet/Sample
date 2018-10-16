@@ -65,8 +65,8 @@ namespace SampleHttpsServer
         {
             var googleOpts = new GoogleOAuth2AuthenticationOptions
             {
-                ClientId = "xxxxx",
-                ClientSecret = "xxxxx",
+                ClientId = "xxxxxxxxx",
+                ClientSecret = "xxxxxxxx",
                 Provider = new GoogleOAuth2AuthenticationProvider()
                 {
                     OnAuthenticated = context =>

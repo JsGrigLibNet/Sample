@@ -35,7 +35,7 @@ nuget MSTest.TestAdapter 1.3.2 prerelease restriction: >= net452
 nuget MSTest.TestFramework 1.3.2 prerelease restriction: >= net452
 nuget Microsoft.Net.Http 
 nuget SlickProxy
-nuget JsGridLibNetJS
+nuget JsGridLibNetJS 0.1.0-pre
 nuget PecanDB
 nuget Microsoft.Owin.Security.Cookies
 nuget Microsoft.Owin.Security.Google

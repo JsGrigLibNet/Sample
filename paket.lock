@@ -10,7 +10,7 @@ NUGET
       System.Reflection.TypeExtensions (>= 4.3) - restriction: && (< net45) (>= netstandard1.6)
       System.Threading.Thread (>= 4.3) - restriction: && (< net45) (>= netstandard1.6)
       System.Threading.ThreadPool (>= 4.3) - restriction: && (< net45) (>= netstandard1.6)
-    JsGridLibNetJS (0.0.1-pre)
+    JsGridLibNetJS (0.1.0-pre)
       Microsoft.AspNet.WebApi (>= 5.2.4) - restriction: >= net45
     Microsoft.AspNet.Cors (5.2.6)
     Microsoft.AspNet.Identity.Core (2.2.2)

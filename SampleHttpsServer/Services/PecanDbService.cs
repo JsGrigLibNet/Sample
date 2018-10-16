@@ -3,9 +3,11 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using JsGridLib.Contracts;
+    using JsGridLib.Models;
     using PecanDB;
 
-    public class PecanDbService : IJsGridStorage<Employee>,IDisposable
+    public class PecanDbService : IDisposable, IJsGridStorage<Employee>
     {
         public PecanDbService()
         {
@@ -17,7 +19,7 @@
         
         public PecanDocumentStore Store { get; set; }
 
-        public JsGridStorageStatistics<Employee> LoadAll(Employee sampleForFilter, Func<IEnumerable<Employee>, Employee, IEnumerable<Employee>> clientSideFiltering, int take, int skip)
+        JsGridStorageStatistics<Employee> IJsGridStorage<Employee>.LoadAll(Employee sampleForFilter, Func<IEnumerable<Employee>, Employee, IEnumerable<Employee>> clientSideFiltering, int take, int skip)
         {
             using (var session=this.Store.OpenSession())
             {
@@ -75,5 +77,7 @@
         {
             this.Store.Dispose();
         }
+
+       
     }
 }

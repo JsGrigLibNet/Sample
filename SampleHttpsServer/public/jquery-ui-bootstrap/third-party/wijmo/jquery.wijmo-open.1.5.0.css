@@ -15,13 +15,12 @@
 .wijmo-wijslider-horizontal
 {
 	position: relative;
-}     
-        
+}
+
 .wijmo-wijslider-horizontal .wijmo-wijslider-track
 {
-    
 }
-        
+
 .wijmo-wijslider-horizontal .wijmo-wijslider-decbutton
 {
     position: absolute;
@@ -43,13 +42,12 @@
 .wijmo-wijslider-vertical
 {
 	position: relative;
-}     
-        
+}
+
 .wijmo-wijslider-vertical .wijmo-wijslider-track
 {
-    
 }
-        
+
 .wijmo-wijslider-vertical .wijmo-wijslider-decbutton
 {
     position: absolute;
@@ -213,7 +211,6 @@
     z-index: 999;
 }
 
-
 .wijmo-wijsplitter-horizontal .wijmo-wijsplitter-h-expanded
 {
     border-bottom: none;
@@ -260,8 +257,6 @@
     overflow: hidden;
     border-right: dotted 0 black;
 }
-
-
 
 .wijmo-wijprogressbar
 {
@@ -418,22 +413,21 @@ div.wijmo-wijprogressbar-north
 /*.wijmo-wijaccordion.ui-helper-horizontal > .ui-widget-content
 {
     width: 200px;
-    height: 200px;  
+    height: 200px;
     padding-top:0;
-    padding-bottom:0;  
+    padding-bottom:0;
     margin-top:0;
-    margin-bottom:0;    
+    margin-bottom:0;
 }
 
 .wijmo-wijaccordion.ui-helper-horizontal > .ui-accordion-header
 {
-    height: 200px;	
+    height: 200px;
     padding-top:0;
     padding-bottom:0;
     margin-top:0;
-    margin-bottom:0;    
+    margin-bottom:0;
 }*/
-
 
 .ui-accordion a
 {
@@ -467,7 +461,6 @@ div.wijmo-wijprogressbar-north
     border: none;
 }
 
-
 .ui-accordion-right .ui-state-active
 {
     border-right: none;
@@ -479,12 +472,10 @@ div.wijmo-wijprogressbar-north
     text-align: center;
 }
 
-
 .ui-accordion-right .ui-accordion-header .ui-icon
 {
     top: 10%;
 }
-
 
 /* LEFT */
 
@@ -513,7 +504,6 @@ div.wijmo-wijprogressbar-north
     margin-right: -2px;
 }
 
-
 .ui-accordion-left .ui-state-active
 {
     border-left: none;
@@ -524,7 +514,6 @@ div.wijmo-wijprogressbar-north
     padding: 2.2em 0 0 0;
     text-align: center;
 }
-
 
 .ui-accordion-left .ui-accordion-header .ui-icon
 {
@@ -548,7 +537,6 @@ div.wijmo-wijprogressbar-north
 {
     position: absolute;
     overflow: hidden;
-
 }
 .wijmo-wijsuperpanel-hbarcontainer, .wijmo-wijsuperpanel-vbarcontainer
 {
@@ -557,7 +545,7 @@ div.wijmo-wijprogressbar-north
 }
 .wijmo-wijsuperpanel-templateouterwrapper
 {
-    position: relative; 
+    position: relative;
 /*    overflow:auto; */
     zoom: 1;
 }
@@ -645,9 +633,6 @@ div.wijmo-wijprogressbar-north
     /*z-index: 101;*/
 }
 
-
-
-
 .wijmo-wijdropdown div.wijmo-dropdown-trigger
 {
     border-right: none;
@@ -696,7 +681,6 @@ padding:3px 5px;
 text-align:left;
 *border-color: white;
 *filter: chroma(color=white);
-
 }
 
 /*
@@ -756,7 +740,7 @@ text-align:left;
 {
     position: relative;
     float: left;
-    margin-right: 3px;    
+    margin-right: 3px;
 }
 .wijmo-wijradio
 {
@@ -799,7 +783,7 @@ text-align:left;
 {
     position: relative;
     float: left;
-    margin-right: 3px;   
+    margin-right: 3px;
 }
 
 .wijmo-wijlist-list
@@ -990,7 +974,6 @@ text-align:left;
 {
 }*/
 
-
 .ui-expander .ui-expander-content
 {
     border-top: 0 none;
@@ -1002,7 +985,6 @@ text-align:left;
     position: relative;
     top: 1px;
 }
-
 
 .wijmo-wijexpander .ui-expander-header a
 {
@@ -1026,7 +1008,6 @@ text-align:left;
     padding: 1em 2.2em;
 }
 
-
 .wijmo-wijexpander .ui-expander-header > a
 {
     padding-left: 2.2em;
@@ -1048,7 +1029,6 @@ text-align:left;
     padding-top: 2.2em;
     display: inline-block;
 }
-
 
 /* RIGHT */
 
@@ -1077,7 +1057,6 @@ text-align:left;
     margin-right: 1px;
 }
 
-
 .ui-expander-right .ui-state-active
 {
     border-right: none;
@@ -1088,12 +1067,10 @@ text-align:left;
     padding: 2.2em 0 0 0;
 }
 
-
 .ui-expander-right .ui-expander-header .ui-icon
 {
     top: 10%;
 }
-
 
 /* LEFT */
 
@@ -1122,7 +1099,6 @@ text-align:left;
     margin-left: 1px;
 }
 
-
 .ui-expander-left .ui-state-active
 {
     border-left: none;
@@ -1132,7 +1108,6 @@ text-align:left;
 {
     padding: 2.2em 0 0 0;
 }
-
 
 .ui-expander-left .ui-expander-header .ui-icon
 {
@@ -1272,7 +1247,6 @@ text-align:left;
     width: 23%;
 }
 
-
 .ui-tabs-left .ui-tabs-nav li.ui-tabs-selected
 {
     margin-right: 2px;
@@ -1289,7 +1263,6 @@ text-align:left;
     z-index: 9999;
     margin:0;
 }
-
 
 .wijmo-wijtooltip .wijmo-wijtooltip-close
 {
@@ -1331,7 +1304,6 @@ padding:0.4em;
     border-bottom-width: 14px;
     border-top: 0 none;
     top: -14px;
-	
 }
 
 .wijmo-wijtooltip-arrow-tr .wijmo-wijtooltip-pointer {
@@ -1356,7 +1328,7 @@ padding:0.4em;
 .wijmo-wijtooltip-arrow-tr .wijmo-wijtooltip-pointer-inner, .wijmo-wijtooltip-arrow-tc .wijmo-wijtooltip-pointer-inner, .wijmo-wijtooltip-arrow-tl .wijmo-wijtooltip-pointer-inner {
     border-bottom-color: inherit;
     border-bottom-style: solid;
-    border-bottom-width: 10px;    
+    border-bottom-width: 10px;
     bottom: -14px;
 	*font-size:0;line-height:0;
 }
@@ -1420,7 +1392,6 @@ padding:0.4em;
 	*font-size:0;line-height:0;
 }
 
-
 .wijmo-wijtooltip-arrow-rb .wijmo-wijtooltip-pointer-inner {
     border-bottom: 0 none;
     border-top-style: dashed;
@@ -1453,7 +1424,6 @@ padding:0.4em;
     border-bottom: 0 none;
     border-top-width: 14px;
     bottom: -14px;
-	
 }
 
 .wijmo-wijtooltip-arrow-br .wijmo-wijtooltip-pointer {
@@ -1668,7 +1638,6 @@ margin:1px 0;
     width: 98%;
     margin: 1px 0;
 }
-
 
 .wijmo-wijmenu-horizontal .ui-widget-header {
 clear:none;

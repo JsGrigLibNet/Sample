@@ -14,7 +14,6 @@
  * Additional bugfixes/changes by smurfy
  */
 !function ($) {
-
     "use strict"; // jshint ;_;
 
     /* FILEINPUT CLASS DEFINITION
@@ -134,6 +133,4 @@
         button_text			: 'Browse',
         button_change_text	: 'Change'
     }
-
 }(window.jQuery);
-

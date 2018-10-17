@@ -3,9 +3,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++
 
 !function ($) {
-
-    $(function(){
-
+    $(function () {
         var $window = $(window);
 
         // Disable certain links in docs
@@ -25,6 +23,5 @@
 
         // make code pretty
         window.prettyPrint && prettyPrint();
-
     })
 }(window.jQuery);

@@ -1,23 +1,21 @@
 ﻿namespace SampleHttpsServer
 {
+    using Microsoft.AspNet.Identity;
+    using Microsoft.Owin.Security;
     using System;
     using System.Collections.Generic;
     using System.Net;
     using System.Net.Http;
     using System.Security.Claims;
     using System.Web.Http;
-    using Microsoft.AspNet.Identity;
-    using Microsoft.Owin.Security;
 
     [RoutePrefix("account"), AllowAnonymous]
     public class AccountController : ApiController
     {
-      
         [HttpGet, Route("login")]
         public IHttpActionResult Login(string returnUrl)
         {
-
-            if (!this.User?.Identity?.IsAuthenticated?? true)
+            if (!this.User?.Identity?.IsAuthenticated ?? true)
             {
                 var authProps = new AuthenticationProperties
                 {
@@ -31,6 +29,7 @@
                 return this.Ok();
             }
         }
+
         [HttpGet, Route("loginNoDb")]
         public IHttpActionResult LoginNoDb(string email, string password)
         {

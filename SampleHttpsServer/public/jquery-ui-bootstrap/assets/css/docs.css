@@ -51,8 +51,6 @@ hr.soften {
     border: 0;
 }
 
-
-
 /* Jumbotrons
 -------------------------------------------------- */
 
@@ -130,7 +128,6 @@ hr.soften {
     box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
 }
 
-
 /* Pattern overlay
 ------------------------- */
 .jumbotron .container {
@@ -152,11 +149,9 @@ hr.soften {
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
 only screen and (     -o-min-device-pixel-ratio: 2/1) {
-
     .jumbotron:after {
         background-size: 150px 150px;
     }
-
 }
 
 /* Masthead (docs home)
@@ -228,8 +223,6 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
     display: none;
 }
 
-
-
 /* Marketing section of Overview
 -------------------------------------------------- */
 
@@ -264,8 +257,6 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
     margin: 0 auto 30px;
     max-height: 145px;
 }
-
-
 
 /* Footer
 -------------------------------------------------- */
@@ -776,7 +767,7 @@ ul#icons span.ui-icon {
 }
 /*slider*/
 #amount{
-    color:#f6931f; 
+    color:#f6931f;
     font-weight:bold;
 }
 #h-slider,#v-slider{

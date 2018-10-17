@@ -46,8 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BossController.cs" />
     <Compile Include="Infrastructure\ControllerResolver.cs" />
-    <Compile Include="Services\PecanDbService.cs" />
+    <Compile Include="Models\Boss.cs" />
+    <Compile Include="Services\StorageService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -55,7 +57,7 @@
     <Compile Include="Models\MyData.cs" />
     <Compile Include="Infrastructure\StartUp.cs" />
     <Compile Include="Models\ValidationObj.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\GridController.cs" />
     <Compile Include="Models\ViewableEmployee.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +69,7 @@
     <None Include="public\jquery-ui-bootstrap\assets\css\font\FontAwesome.otf" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="public\index2.html" />
     <Content Include="public\index.html" />
     <Content Include="public\jquery-ui-bootstrap\assets\css\bootstrap.min.css" />
     <Content Include="public\jquery-ui-bootstrap\assets\css\docs.css" />

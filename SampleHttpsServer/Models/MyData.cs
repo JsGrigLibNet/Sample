@@ -2,7 +2,7 @@
 {
     using JsGridLib.Contracts;
 
-    public class MyData: IJsGridEntity
+    public class MyData : IJsGridEntity
     {
         public string Name { get; set; }
 

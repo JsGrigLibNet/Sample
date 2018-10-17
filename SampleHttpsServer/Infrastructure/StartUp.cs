@@ -5,7 +5,11 @@ using SampleHttpsServer;
 
 namespace SampleHttpsServer
 {
+    using Microsoft.AspNet.Identity;
     using Microsoft.Owin.FileSystems;
+    using Microsoft.Owin.Security;
+    using Microsoft.Owin.Security.Cookies;
+    using Microsoft.Owin.Security.Google;
     using Microsoft.Owin.StaticFiles;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Serialization;
@@ -18,16 +22,11 @@ namespace SampleHttpsServer
     using System.Web.Http;
     using System.Web.Http.Dispatcher;
     using System.Web.Http.Routing;
-    using Microsoft.AspNet.Identity;
-    using Microsoft.Owin.Security;
-    using Microsoft.Owin.Security.Cookies;
-    using Microsoft.Owin.Security.Google;
 
     public class StartUp
     {
         public void Configuration(IAppBuilder app)
         {
-
             SetUpGeneralCookieAuthentication(app);
             SetUpGoogleAuthentication(app);
 
@@ -45,7 +44,8 @@ namespace SampleHttpsServer
 
             SetUpWebApi(app);
         }
-        static void SetUpGeneralCookieAuthentication(IAppBuilder app)
+
+        private static void SetUpGeneralCookieAuthentication(IAppBuilder app)
         {
             var cookieOpts = new CookieAuthenticationOptions
             {
@@ -55,18 +55,17 @@ namespace SampleHttpsServer
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
             };
 
-           
             app.UseCookieAuthentication(cookieOpts);
-            
+
             app.SetDefaultSignInAsAuthenticationType(cookieOpts.AuthenticationType);
         }
 
-        static void SetUpGoogleAuthentication(IAppBuilder app)
+        private static void SetUpGoogleAuthentication(IAppBuilder app)
         {
             var googleOpts = new GoogleOAuth2AuthenticationOptions
             {
-                ClientId = "xxxxxxxxx",
-                ClientSecret = "xxxxxxxx",
+                ClientId = "xxxxxx",
+                ClientSecret = "xxxx",
                 Provider = new GoogleOAuth2AuthenticationProvider()
                 {
                     OnAuthenticated = context =>
@@ -79,7 +78,7 @@ namespace SampleHttpsServer
                 CallbackPath = new PathString("/callback"),
             };
             googleOpts.Scope.Add("email");
-           
+
             app.UseGoogleAuthentication(googleOpts);
         }
 
@@ -87,8 +86,6 @@ namespace SampleHttpsServer
         {
             var config = new HttpConfiguration();
             config.Services.Replace(typeof(IHttpControllerTypeResolver), new ControllerResolver());
-
-            
 
             config.MapHttpAttributeRoutes();
             config.Routes.IgnoreRoute("elmah", "{resource}.axd/{*pathInfo}");

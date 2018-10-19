@@ -1,11 +1,19 @@
 ﻿using Microsoft.Owin;
-using SampleHttpsServer;
+using SampleHttpsServer.Infrastructure;
 
 [assembly: OwinStartup(typeof(StartUp))]
 
-namespace SampleHttpsServer
+namespace SampleHttpsServer.Infrastructure
 {
+    using System;
+    using System.Net.Http.Formatting;
+    using System.Security.Claims;
+    using System.Threading.Tasks;
+    using System.Web.Http;
+    using System.Web.Http.Dispatcher;
+    using System.Web.Http.Routing;
     using Microsoft.AspNet.Identity;
+    using Microsoft.Owin;
     using Microsoft.Owin.FileSystems;
     using Microsoft.Owin.Security;
     using Microsoft.Owin.Security.Cookies;
@@ -14,14 +22,8 @@ namespace SampleHttpsServer
     using Newtonsoft.Json;
     using Newtonsoft.Json.Serialization;
     using Owin;
+    using SampleHttpsServer;
     using SlickProxyLib;
-    using System;
-    using System.Net.Http.Formatting;
-    using System.Security.Claims;
-    using System.Threading.Tasks;
-    using System.Web.Http;
-    using System.Web.Http.Dispatcher;
-    using System.Web.Http.Routing;
 
     public class StartUp
     {
@@ -64,8 +66,8 @@ namespace SampleHttpsServer
         {
             var googleOpts = new GoogleOAuth2AuthenticationOptions
             {
-                ClientId = "xxxxxx",
-                ClientSecret = "xxxx",
+                ClientId = "xxxxxxx",
+                ClientSecret = "xxxxx",
                 Provider = new GoogleOAuth2AuthenticationProvider()
                 {
                     OnAuthenticated = context =>

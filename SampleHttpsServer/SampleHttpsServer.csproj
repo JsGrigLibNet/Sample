@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Models\ALink.cs" />
+    <Compile Include="Models\AppData.cs" />
     <Compile Include="Controllers\BossController.cs" />
     <Compile Include="Infrastructure\ControllerResolver.cs" />
     <Compile Include="Models\Boss.cs" />
@@ -69,6 +71,12 @@
     <None Include="public\jquery-ui-bootstrap\assets\css\font\FontAwesome.otf" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="public\animate.css" />
+    <Content Include="public\app.js" />
+    <Content Include="public\angular.min.js" />
+    <Content Include="public\app2.js" />
+    <Content Include="public\bootstrap.min.css" />
+    <Content Include="public\css.css" />
     <Content Include="public\index2.html" />
     <Content Include="public\index.html" />
     <Content Include="public\jquery-ui-bootstrap\assets\css\bootstrap.min.css" />
@@ -136,6 +144,7 @@
     <Content Include="public\lib\jsgrid-theme.min.css" />
     <Content Include="public\lib\jsgrid.js" />
     <Content Include="public\lib\jsgrid.min.css" />
+    <Content Include="public\login.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Choose>
@@ -146,9 +155,14 @@
     </When>
   </Choose>
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3' Or $(TargetFrameworkVersion) == 'v4.7' Or $(TargetFrameworkVersion) == 'v4.7.1' Or $(TargetFrameworkVersion) == 'v4.7.2')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3')">
       <PropertyGroup>
         <__paket__Microsoft_CodeDom_Providers_DotNetCompilerPlatform_props>net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform</__paket__Microsoft_CodeDom_Providers_DotNetCompilerPlatform_props>
+      </PropertyGroup>
+    </When>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3' Or $(TargetFrameworkVersion) == 'v4.7' Or $(TargetFrameworkVersion) == 'v4.7.1' Or $(TargetFrameworkVersion) == 'v4.7.2')">
+      <PropertyGroup>
+        <__paket__Microsoft_CodeDom_Providers_DotNetCompilerPlatform_props>net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform</__paket__Microsoft_CodeDom_Providers_DotNetCompilerPlatform_props>
       </PropertyGroup>
     </When>
   </Choose>

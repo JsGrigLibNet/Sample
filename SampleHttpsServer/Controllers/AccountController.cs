@@ -8,13 +8,30 @@
     using System.Net.Http;
     using System.Security.Claims;
     using System.Web.Http;
+    using SampleHttpsServer.Controllers;
 
     [RoutePrefix("account"), AllowAnonymous]
     public class AccountController : ApiController
     {
-        [HttpGet, Route("login")]
-        public IHttpActionResult Login(string returnUrl)
+        [HttpGet, Route("app")]
+        public AppData App()
         {
+            return new AppData()
+            {
+                Name = this?.User?.Identity?.Name ?? "",
+                IsAuthenticated = this.User?.Identity?.IsAuthenticated,
+                Links= GridController.Links,
+                ApplicationName = GridController.ApplicationName,
+                ApplicationTitle = GridController.ApplicationTitle,
+                CompanyName = GridController.CompanyName,
+                Year= DateTime.UtcNow.Year
+            };
+
+        }
+        [HttpGet, Route("login")]
+        public IHttpActionResult Login(string returnUrl= null)
+        {
+            returnUrl = returnUrl ?? Url.Content("~/");
             if (!this.User?.Identity?.IsAuthenticated ?? true)
             {
                 var authProps = new AuthenticationProperties
@@ -39,7 +56,6 @@
                 claims.Add(new Claim(ClaimTypes.Name, email.Split('@')[0]));
                 claims.Add(new Claim(ClaimTypes.Email, email));
                 var id = new ClaimsIdentity(claims, DefaultAuthenticationTypes.ApplicationCookie);
-
                 var ctx = this.Request.GetOwinContext();
                 var authenticationManager = ctx.Authentication;
                 authenticationManager.SignIn(id);
@@ -55,7 +71,7 @@
         public IHttpActionResult Logout()
         {
             this.Request.GetOwinContext().Authentication.SignOut();
-            return this.Ok();
+            return Redirect(Url.Content("~/"));
         }
     }
 }

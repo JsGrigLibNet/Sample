@@ -3,6 +3,7 @@
     using Microsoft.Owin.Hosting;
     using System;
     using System.Diagnostics;
+    using SampleHttpsServer.Infrastructure;
 
     internal class Program
     {

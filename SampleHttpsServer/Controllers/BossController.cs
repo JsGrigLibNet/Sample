@@ -7,12 +7,9 @@
     [Authorize]
     public class BossController : GenericJsGridController<Boss>
     {
-        public BossController()
-            : base(
-                false,
-                (db, filter) => { return db.Where(c => c != null); },
-                new { rules = new { } },
-                new StorageService<Boss>())
+        public BossController(): base((db, filter) => db.Where(c => c != null)
+            ,new { rules = new { } }
+            ,new StorageService<Boss>())
         {
         }
     }
